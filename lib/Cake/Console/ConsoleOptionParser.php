@@ -79,6 +79,14 @@ App::uses('HelpFormatter', 'Console');
 class ConsoleOptionParser {
 
 /**
+ * Tokens being parsed, kept as a declared property (dynamic properties are deprecated in PHP 8.2).
+ *
+ * @var array
+ */
+	protected $_tokens = array();
+
+
+/**
  * Description text - displays before options when help is generated
  *
  * @see ConsoleOptionParser::description()
